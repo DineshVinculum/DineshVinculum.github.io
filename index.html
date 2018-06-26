@@ -1,0 +1,1240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vestige</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="assets/css/magicsuggest.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--header start-->
+        <div class="header">
+            <div class="container">
+                <div class="flex-row">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" />
+                    </div>
+                    <div class="search">
+                        <form>
+                            <input type="text" placeholder="Search Here">
+                            <button type="submit" class="search-button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="header-right">
+                        <ul class="user-options">
+                            <li class="user-option-list language">
+                                <div class="current-location">
+                                    <i class="fa fa-globe" aria-hidden="true"></i>
+                                    <span class="location__name">Language</span>
+                                </div>
+                                <ul class="language-box">
+                                    <li class="language_name">
+                                        Hindi
+                                    </li>
+                                    <li class="language_name">
+                                        English
+                                    </li>
+                                    <li class="language_name">
+                                        Tamil
+                                    </li>
+                                    <li class="language_name">
+                                        Telugu
+                                    </li>
+                                    <li class="language_name">
+                                        Gujrati
+                                    </li>
+                                    <li class="language_name">
+                                        Oriya
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="user-option-list location">
+                                <div class="current-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span class="location__name">AALO MI</span>
+                                </div>
+                                <div class="location-box">
+                                    <div class="location-header">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>Choose your location</span>
+                                    </div>
+                                    <div class="location-content">
+                                        <!-- Cities-->
+                                        <div class="cities">
+                                            <ul class="cities-list">
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/delhi.png" alt="Delhi">
+                                                    </div>
+                                                    <span>Delhi</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/mumbai.png" alt="Mumbai">
+                                                    </div>
+                                                    <span>Mumbai</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/agra.png" alt="Agra">
+                                                    </div>
+                                                    <span>Agra</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/pune.png" alt="Pune">
+                                                    </div>
+                                                    <span>Pune</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/kolkata.png" alt="Kolkata">
+                                                    </div>
+                                                    <span>Kolkata</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/gurgaon.png" alt="gurgaon">
+                                                    </div>
+                                                    <span>Gurgaon</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/noida.png" alt="Noida">
+                                                    </div>
+                                                    <span>Noida</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Cities End-->
+                                        <div class="your-city">
+                                            <div class="your-city--inner">
+                                                <div class="city-box">
+                                                    <form class="">
+                                                        <input list="browsers" name="browser" class="selectbox" placeholder="Choose Your location" value="AALO MI">
+                                                        <datalist id="browsers">
+                                                            <option value="AALO MI"></option>
+                                                            <option value="AALO DE"></option>
+                                                            <option value="Aligarh"></option>
+                                                            <option value="Indore"></option>
+                                                            <option value="Mathura"></option>
+                                                        </datalist>
+                                                        <button type="submit" class="city__submit">
+                                                            <i class="fa fa-send-o"></i> Submit</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="user-option-list notification">
+                                <div class="notificationa-alert">
+                                    <span class="alert__count">5</span>
+                                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                </div>
+                                <!--notification box-->
+                                <div class="notification-listbox">
+                                    <div class="notification-header">
+                                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                        <span>Notifications</span>
+                                    </div>
+                                    <ul class="notification-list">
+                                        <li class="notification-list--item">
+                                            <div class="notification-image">
+                                                <img src="assets/images/avtar.jpg" alt="">
+                                            </div>
+                                            <div class="notification-details">
+                                                <div>
+                                                    <span class="notification__username">Rajiv Shukla</span>
+                                                    liked your post
+                                                </div>
+                                                <p class="notification-time">
+                                                    <small>5 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="notification-list--item">
+                                            <div class="notification-image">
+                                                <img src="assets/images/avtar.jpg" alt="">
+                                            </div>
+                                            <div class="notification-details">
+                                                <div>
+                                                    <span class="notification__username">Rajiv Shukla</span>
+                                                    liked your post
+                                                </div>
+                                                <p class="notification-time">
+                                                    <small>5 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="notification-list--item">
+                                            <div class="notification-image">
+                                                <img src="assets/images/avtar.jpg" alt="">
+                                            </div>
+                                            <div class="notification-details">
+                                                <div>
+                                                    <span class="notification__username">Rajiv Shukla</span>
+                                                    liked your post
+                                                </div>
+                                                <p class="notification-time">
+                                                    <small>5 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="notification-footer">
+                                        <a href="#">View All Notifications
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--notification box end-->
+                            </li>
+                            <li class="user-option-list profile">
+                                <div class="user-profile">
+                                    <img src="assets/images/avtar.jpg" />
+                                    <div class="user-detail">
+                                        <div class="user__name">User Name</div>
+                                        <div class="user__role">User Role</div>
+                                    </div>
+                                </div>
+                                <div class="user-profile-box">
+                                    <div class="user-box--item">
+                                        <a href="">
+                                            <i class="fa fa-cog"></i>
+                                            <span>Setting</span>
+                                        </a>
+                                    </div>
+                                    <div class="user-box--item">
+                                        <a href="">
+                                            <i class="fa fa-user"></i>
+                                            <span>My Profile</span>
+                                        </a>
+                                    </div>
+                                    <div role="separator" class="divider"></div>
+                                    <div class="user-box--item">
+                                        <a href="#">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                            <span>Logout</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header end-->
+        <div class="content-area">
+            <!-- sidenav start-->
+            <div class="sidenav">
+                <div class="sidenav-menu">
+                    <!-- Menu Start-->
+                    <ul class="menu-list">
+                        <li class="menu-list-item">
+                            <a class="menu-item__link" title="Menu">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                <span>Menu</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item ">
+                            <a class="menu-item__link" title="Purchase Order" href="Purchase-Order-detail.html">
+                                <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                                <span>Purchase Order</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item" title="Item List">
+                            <a class="menu-item__link" href="item-table.html">
+                                <i class="fa fa-cube" aria-hidden="true"></i>
+                                <span>Item List</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item active" title="Promotions">
+                            <a class="menu-item__link" href="index.html">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                                <span>Promotions</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item" title="Location">
+                            <a class="menu-item__link" href="hierarchy-table.html">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>Location</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="menu-item__link" href="distributer.html" title="Add Distributer">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                <span>Add Distributer</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" href="vendor_master.html" title="Vendor Master">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span>Vendor Master</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" href="STO.html" title="Stock Transfer">
+                                <i class="fa fa-truck" aria-hidden="true"></i>
+                                <span>Stock Transfer</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" href="Tax.html" title="Tax">
+                                <i class="fa fa-inr" aria-hidden="true"></i>
+                                <span>Tax</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--Menu End-->
+                </div>
+            </div>
+            <!-- sidenav end-->
+
+            <div class="page-content">
+                <div class="promotion-home">
+                    <div class="vd-section-wrap">
+                        <div class="vd-header vd-header--page">Promotions</div>
+                    </div>
+                    <div class="promotion-tabs">
+                        <ul class="promiton-tabs-list">
+                            <li class="promotion-item active" data="current">
+                                Current & Upcoming
+                            </li>
+                            <li class="promotion-item" data="past">Past</li>
+                            <li class="promotion-item" data="all">All</li>
+                        </ul>
+                    </div>
+                    <div class="creation-bar">
+                        <div class="creation__text">
+                            Create promotions and manage current and upcoming ones.
+                            <a href="javascript:void(0)"> Need help?</a>
+                        </div>
+                        <div class="add_promotion">Add Promotion</div>
+                    </div>
+                    <div class="tab--content">
+                        <div id="current" class="promotion-list active">
+                            <table class="promotion-table">
+                                <thead>
+                                    <tr>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Name</th>
+                                        <th>Available On</th>
+                                        <th class="vd-tight"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div class="promo-image">
+                                <img src="assets/images/promotion.png" />
+                                <div class="promo__text">
+                                    Keep an eye here for promotions that are currently happening, or ones that will happen soon.
+                                </div>
+                            </div>
+                        </div>
+                        <div id="past" class="promotion-list">
+                            <table class="promotion-table">
+                                <thead>
+                                    <tr>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Name</th>
+                                        <th>Available On</th>
+                                        <th class="vd-tight"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="open-details">
+                                            <i class="fa fa-angle-right" aria-hidden="true" style="margin-right: 15px;"></i>
+                                            16 May 2018 10:00AM
+                                        </td>
+                                        <td class="open-details">17 May 2018 11:00AM</td>
+                                        <td class="open-details">Summer Offer</td>
+                                        <td class="open-details">All Branches</td>
+                                        <td class="vd-tight">
+                                            <div class="table-action">
+                                                <i class="fa fa-eye"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="offer-details">
+                                        <td colspan="5">
+                                            <div class="flex-row" style="align-items:flex-start;">
+                                                <div class="flex-item">
+                                                    <div class="panel-heading">
+                                                        <i class="fa fa-tags" aria-hidden="true"></i> Summer Offer</div>
+                                                    <div class="promotion__description">Buy 2 MOM product get 1 free.</div>
+                                                </div>
+                                                <div class="flex-item">
+                                                    <div class="expanded-list-details">
+                                                        <div class="vd-text-signpost">Available On</div>
+                                                        <hr class="hr">
+                                                        <div class="vd-text-label">All Outlets</div>
+                                                        <div class="vd-text-signpost">Customer Group</div>
+                                                        <hr class="hr">
+                                                        <div class="vd-text-label">Available to Everyone</div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-item">
+                                                    <div class="detail-action">
+                                                        <div class="action--button">
+                                                            <i class="fa fa-edit"></i> Edit Promotion
+                                                        </div>
+                                                        <div class="action--button">
+                                                            <i class="fa fa-clone"></i> Clone
+                                                        </div>
+                                                        <div class="action--button">
+                                                            <i class="fa fa-trash"></i> Delete
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="all" class="promotion-list">
+                            <table class="promotion-table">
+                                <thead>
+                                    <tr>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Name</th>
+                                        <th>Available On</th>
+                                        <th class="vd-tight"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="open-details">
+                                            <i class="fa fa-angle-right" aria-hidden="true" style="margin-right: 15px;"></i>
+                                            16 May 2018 10:00AM
+                                        </td>
+                                        <td class="open-details">17 May 2018 11:00AM</td>
+                                        <td class="open-details">Summer Offer</td>
+                                        <td class="open-details">All Locations</td>
+                                        <td class="vd-tight">
+                                            <div class="table-action">
+                                                <i class="fa fa-eye"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="offer-details">
+                                        <td colspan="5">
+                                            <div class="flex-row" style="align-items:flex-start;">
+                                                <div class="flex-item">
+                                                    <div class="panel-heading">
+                                                        <i class="fa fa-tags" aria-hidden="true"></i> Summer Offer</div>
+                                                    <div class="promotion__description">Buy 2 MOM product get 1 free.</div>
+                                                </div>
+                                                <div class="flex-item">
+                                                    <div class="expanded-list-details">
+                                                        <div class="vd-text-signpost">Available On</div>
+                                                        <hr class="hr">
+                                                        <div class="vd-text-label">All Locations</div>
+                                                        <div class="vd-text-signpost">Customer Group</div>
+                                                        <hr class="hr">
+                                                        <div class="vd-text-label">Available to Everyone</div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-item">
+                                                    <div class="detail-action">
+                                                        <div class="action--button">
+                                                            <i class="fa fa-edit"></i> Edit Promotion
+                                                        </div>
+                                                        <div class="action--button">
+                                                            <i class="fa fa-clone"></i> Clone
+                                                        </div>
+                                                        <div class="action--button">
+                                                            <i class="fa fa-trash"></i> Delete
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="create-promotion">
+                    <div class="vd-section-wrap">
+                        <div class="vd-header vd-header--page">
+                            <i class="fa fa-arrow-left goback" aria-hidden="true"></i>
+                            New Promotion
+                        </div>
+                    </div>
+                    <div class="creation-bar">
+                        <div class="creation__text">
+                            Set special offers and discounts for your customers.
+                        </div>
+                        <div class="action-buttons">
+                            <div class="add_promotion">Save</div>
+                            <div class="add_promotion cancel">Cancel</div>
+                        </div>
+                    </div>
+                    <form class="promocreate" ng-app="">
+                        <div class="crete-promo-wrapper">
+                            <div class="promo__heading">General</div>
+                            <div class="flex-row">
+                                <div class="flex-item">
+                                    <div class="section__content">
+                                        Name the promotion and specify the location & priority.
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>Promotion Name</label>
+                                        <input type="text" ng-model="name" placeholder="Enter Promotion Name" class="form-element" maxlength="30" />
+                                        <div class="max__limit">Max characters: 30</div>
+                                    </div>
+                                    <div class="form-control">
+                                        <label>Short Description</label>
+                                        <textarea placeholder="Provide a short description to explain this promotion." maxlength="150" class="form-element" ng-model="description"
+                                        /></textarea>
+                                        <div class="max__limit">Max characters: 150</div>
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>Preview</label>
+                                        <div class="data-panel">
+                                            <div class="panel-heading">
+                                                <i class="fa fa-tags" aria-hidden="true"></i> Promotion Name: {{name}}</div>
+                                            <span class="promotion__description"> {{description}} </span>
+                                            <hr class="hr">
+                                            <p class="text-supplementary">
+                                                The name and description can be used for promotion banner.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="flex-item">
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>Location</label>
+                                        <select id="lstFruits" multiple="multiple">
+                                            <option value="1">Delhi</option>
+                                            <option value="2">Noida</option>
+                                            <option value="3">Agra</option>
+                                            <option value="4">Kolkata</option>
+                                            <option value="5">Mathura</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>Set Priority</label>
+                                        <select class="form-element">
+                                            <option>select</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="flex-item">
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>Allow Repetitive</label>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>Status</label>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="crete-promo-wrapper">
+                            <div class="promo__heading">Type of Promotion</div>
+                            <div class="flex-row">
+                                <div class="flex-item">
+                                    <div class="section__content">
+                                        Set up the type of promotion you would like to run.
+                                    </div>
+                                </div>
+                                <div class="flex-item flex2">
+                                    <div class="data-panel active" data="basic">
+                                        <div class="Promotion__type">Bill Buster</div>
+                                        <hr>
+                                        <div class="Promotion__details">Offer basic discount to Distributers.</div>
+                                    </div>
+                                    <div class="data-panel" data="advanced-offer">
+                                        <div class="Promotion__type">Advanced</div>
+                                        <hr>
+                                        <div class="Promotion__details">Buy X category/Item and get N discount on Item or category.</div>
+                                    </div>
+                                    <div class="data-panel" data="customized-offer">
+                                        <div class="Promotion__type">Customized offer</div>
+                                        <hr>
+                                        <div class="Promotion__details">Create offer as per Vestige need & get offer on identified item from group</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="basic" class="promotion-content active">
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2" style="margin-left: 20px;">
+                                        <div class="form-control w-100">
+                                            <label>Promotion Type</label>
+                                            <select class="form-element" id="billbusterselect">
+                                                <option value="1">Bill offer - discount</option>
+                                                <option value="3">Item Free</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="form-control w-100">
+                                            <label>Alert When Amount Reaches</label>
+                                            <input type="text" class="form-element" value="Alert When Amount Reaches" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="form-control w-100">
+                                            <label>Offer Description</label>
+                                            <input type="text" class="form-element" value="Purchase a range of bill amount and get N amount offer on Bill amount" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row" id="condition-box" style="display: none">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="discountbox active" id="discountbox">
+                                            <div class="discount-inner" style="flex-wrap: wrap">
+                                                <div class="label" style="min-width:100%;margin-bottom: 5px;margin-top: 0;text-align: left">Condition</div>
+                                                <div class="discount-options" style="justify-content:flex-start">
+                                                    <div class="form-control">
+                                                        <label>Select</label>
+                                                        <div class="switch-field" style="min-width: 180px;">
+                                                            <input type="radio" id="condition1" name="condition" value="yes" checked/>
+                                                            <label for="condition1">> =</label>
+                                                            <input type="radio" id="condition2" name="condition" value="no" />
+                                                            <label for="condition2">Range</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-control" style="margin-right: 5px;max-width: 90px;">
+                                                        <label>From</label>
+                                                        <input type="text" id="" placeholder="" class="form-element" />
+                                                    </div>
+                                                    <div class="form-control" id="tovalue" style="display: none;margin-right: 5px;max-width: 90px;">
+                                                        <label>To</label>
+                                                        <input type="text" id="" placeholder="" class="form-element" />
+                                                    </div>
+                                                    <div class="form-control" style="margin-right: 5px;    min-width: 300px;">
+                                                        <label>Item Name</label>
+                                                        <input type="text" id="ms3" placeholder="" class="form-element" />
+                                                    </div>
+                                                    <div class="form-control" style="margin-right: 5px;max-width: 90px;">
+                                                        <label>Qty</label>
+                                                        <input type="text" id="" placeholder="" class="form-element" />
+                                                    </div>
+                                                    <div class="newone">
+                                                        <i class="fa fa-plus-square-o"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="discount-inner" id="newadd" style="display:none;flex-wrap: wrap">
+                                                <div class="discount-options" style="justify-content:flex-start">
+                                                    <div class="form-control">
+                                                        <label>Select</label>
+                                                        <div class="switch-field" style="min-width: 180px;">
+                                                            <input type="radio" id="condition3" name="condition2" value="yes" checked/>
+                                                            <label for="condition3">> =</label>
+                                                            <input type="radio" id="condition4" name="condition2" value="no" />
+                                                            <label for="condition4">Range</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-control" style="margin-right: 5px;max-width: 90px;">
+                                                        <label>From</label>
+                                                        <input type="text" id="" placeholder="" class="form-element" />
+                                                    </div>
+                                                    <div class="form-control" id="tovalue1" style="display: none;margin-right: 5px;max-width: 90px;">
+                                                        <label>To</label>
+                                                        <input type="text" id="" placeholder="" class="form-element" />
+                                                    </div>
+                                                    <div class="form-control" style="margin-right: 5px;    min-width: 300px;">
+                                                        <label>Item Name</label>
+                                                        <input type="text" id="ms4" placeholder="" class="form-element" />
+                                                    </div>
+                                                    <div class="form-control" style="margin-right: 5px;max-width: 90px;">
+                                                        <label>Qty</label>
+                                                        <input type="text" id="" placeholder="" class="form-element" />
+                                                    </div>
+                                                    <div class="newone">
+                                                        <i class="fa fa-plus-square-o"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row get-box">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="discountbox active" id="discountbox">
+                                            <div class="discount-inner"  style="flex-wrap: wrap">
+                                                <div class="label" style="min-width:100%;margin-bottom: 5px;margin-top: 0;text-align: left">Get</div>
+                                                <div class="discount-options">
+                                                    <div class="form-control">
+                                                        <label>Discount</label>
+                                                        <div class="switch-field">
+                                                            <input type="radio" id="switch_left" name="switch_2" value="yes" checked/>
+                                                            <label for="switch_left">%</label>
+                                                            <input type="radio" id="switch_right" name="switch_2" value="no" />
+                                                            <label for="switch_right">Rs.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-control" style="flex: 1; margin: 0 10px;">
+                                                        <label>Discount value</label>
+                                                        <input type="text" id="d_value" placeholder="Discount value" class="form-element" Value="10%" />
+                                                    </div>
+                                                    <div class="form-control">
+                                                        <label>Applicable to</label>
+                                                        <div class="switch-field">
+                                                            <input type="radio" id="busterp_all" name="buster" value="yes" checked/>
+                                                            <label for="busterp_all">All</label>
+                                                            <input type="radio" id="busterspecific" name="buster" value="no" />
+                                                            <label for="busterspecific">Specific</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specific_filter" id="busterfilter">
+                                                <hr>
+                                                <div class="flex-row" style="align-items: center;">
+                                                    <div class="form-control" style="margin-top: 20px;flex:1">
+                                                        <label>Filter by item name, category name and item code</label>
+                                                        <div class="filter">
+                                                            <select class="form-element">
+                                                                <option value="1">Include</option>
+                                                                <option value="2">Exclude</option>
+                                                            </select>
+                                                            <select class="form-element">
+                                                                <option value="1">Category</option>
+                                                                <option value="2">Product</option>
+                                                            </select>
+                                                            <input type="text" id="ms1" placeholder="Add a Filter" class="form-element" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="addmore" title="Add New Filter">
+                                                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-control" id="newfilter" style="display:none">
+                                                    <div class="filter">
+                                                        <select class="form-element">
+                                                            <option value="1">Include</option>
+                                                            <option value="2">Exclude</option>
+                                                        </select>
+                                                        <select class="form-element">
+                                                            <option value="1">Category</option>
+                                                            <option value="2">Product</option>
+                                                        </select>
+                                                        <input type="text" id="ms2" placeholder="Add a Filter" class="form-element" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row get-box">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="discountbox active" id="discountbox">
+                                            <div class="discount-inner" style="flex-wrap: wrap">
+                                                <div class="label" style="min-width:100%;margin-bottom: 5px;margin-top: 0;text-align: left">Intelligent Filters</div>
+                                                <div class="discount-options" style="justify-content:flex-start">
+                                                    <div class="form-control">
+                                                        <label>Stock Above</label>
+                                                        <input type="text" placeholder=" Enter value" class="form-element">
+                                                    </div>
+                                                    <div class="form-control" style="flex:1;margin: 0 10px; align-self: center;text-align: center">
+                                                        <label>Or</label>
+                                                    </div>
+                                                    <div class="form-control">
+                                                        <label>Stock Above max Qty.</label>
+                                                        <label class="switch">
+                                                            <input type="checkbox">
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="advanced-offer" class="promotion-content ">
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2" style="margin-left: 20px;">
+                                        <div class="form-control w-100">
+                                            <label>Promotion Type</label>
+                                            <select class="form-element" id="promotype">
+                                                <option value="1">Purchase of N Amount</option>
+                                                <option value="2">Purchase of N Items</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="form-control w-100">
+                                            <label>Applicable On</label>
+                                            <select class="form-element">
+                                                <option>Select</option>
+                                                <option value="1">First Purchase</option>
+                                                <option value="2">Repurchase</option>
+                                                <option value="3">Apply All</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="discountbox active" id="discountbox">
+                                            <div class="discount-inner">
+                                                <div class="label">Buy</div>
+                                                <div class="discount-options" style="justify-content: flex-start">
+                                                    <div class="form-control">
+                                                        <label id="label__name">Amount</label>
+                                                        <input type="text" id="label_value" placeholder="Enter value" class="form-element" Value="Rs." />
+                                                    </div>
+                                                    <div class="form-control" style="margin-left: 20px">
+                                                        <label>Applicable to</label>
+                                                        <div class="switch-field">
+                                                            <input type="radio" id="ad_buyall" name="adv_applicable" value="yes" checked/>
+                                                            <label for="ad_buyall">All</label>
+                                                            <input type="radio" id="ad_buyspecific" name="adv_applicable" value="no" />
+                                                            <label for="ad_buyspecific">Specific</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specific_filter" id="adv_buyfilter">
+                                                <hr>
+                                                <div class="form-control" style="margin-top: 20px;">
+                                                    <label>Filter by item name, category name and item code</label>
+                                                    <div class="filter">
+                                                        <select class="form-element">
+                                                            <option value="1">Include</option>
+                                                            <option value="2">Exclude</option>
+                                                        </select>
+                                                        <select class="form-element">
+                                                            <option value="1">Category</option>
+                                                            <option value="2">Product</option>
+                                                        </select>
+                                                        <input type="text" id="ms1" placeholder="Add a Filter" class="form-element" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="form-control w-100">
+                                            <label>Offer on</label>
+                                            <select class="form-element">
+                                                <option value="1">Get the following item</option>
+                                                <option value="2">Save a certain Amount</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="discountbox active" id="discountbox">
+                                            <div class="discount-inner">
+                                                <div class="label">Get</div>
+                                                <div class="discount-options">
+                                                    <div class="form-control">
+                                                        <label>Discount</label>
+                                                        <div class="switch-field">
+                                                            <input type="radio" id="switch_free1" name="free1" value="free" checked="">
+                                                            <label for="switch_free1">Free</label>
+                                                            <input type="radio" id="switch_per1" name="free1" value="per">
+                                                            <label for="switch_per1">%</label>
+                                                            <input type="radio" id="switch_rs1" name="free1" value="rs">
+                                                            <label for="switch_rs1">Rs.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-control">
+                                                        <label>Value</label>
+                                                        <input type="text" placeholder="Enter value" class="form-element">
+                                                    </div>
+                                                    <div class="form-control">
+                                                        <label>Applicable to</label>
+                                                        <div class="switch-field">
+                                                            <input type="radio" id="ad_getall" name="ad_get" value="yes" checked="">
+                                                            <label for="ad_getall">All</label>
+                                                            <input type="radio" id="ad_getspecific" name="ad_get" value="no">
+                                                            <label for="ad_getspecific">Specific</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specific_filter" id="ad_getfilter">
+                                                <hr>
+                                                <div class="form-control" style="margin-top: 20px;">
+                                                    <label>Filter by item name, category name and item code</label>
+                                                    <div class="filter">
+                                                        <select class="form-element">
+                                                            <option value="1">Include</option>
+                                                            <option value="2">Exclude</option>
+                                                        </select>
+                                                        <select class="form-element">
+                                                            <option value="1">Category</option>
+                                                            <option value="2">Product</option>
+                                                        </select>
+                                                        <div class="ms-ctn form-control" id="ms1">
+                                                            <span class="ms-helper " style="display: none;"></span>
+                                                            <div class="ms-sel-ctn">
+                                                                <input type="text" class="" placeholder="Add a Filter" style="width: 58px;">
+                                                                <div style="display: none;"></div>
+                                                            </div>
+                                                            <div class="ms-trigger">
+                                                                <div class="ms-trigger-ico"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="customized-offer" class="promotion-content ">
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2" style="margin-left: 20px;">
+                                        <div class="form-control w-100">
+                                            <label>Promotion Type</label>
+                                            <select class="form-element">
+                                                <option value="1">Items from group</option>
+                                                <option value="2">Select items or category</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="form-control w-100">
+                                            <label>Applicable On</label>
+                                            <select class="form-element">
+                                                <option>Select</option>
+                                                <option value="1">First Purchase</option>
+                                                <option value="2">Repurchase</option>
+                                                <option value="3">Apply All</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="discountbox active" id="discountbox">
+                                            <div class="discount-inner">
+                                                <div class="label">Buy</div>
+                                                <div class="discount-options" style="justify-content: flex-start">
+                                                    <div class="form-control">
+                                                        <label id="label__name">Amount</label>
+                                                        <input type="text" id="label_value" placeholder="Enter value" class="form-element" Value="Rs." />
+                                                    </div>
+                                                    <div class="form-control" style="margin-left: 20px">
+                                                        <label>Applicable to</label>
+                                                        <div class="switch-field">
+                                                            <input type="radio" id="app_all1" name="applicatble_check" value="yes" checked/>
+                                                            <label for="app_all1">All</label>
+                                                            <input type="radio" id="app_specific1" name="applicatble_check" value="no" />
+                                                            <label for="app_specific1">Specific</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specific_filter" id="applicableto">
+                                                <hr>
+                                                <div class="form-control" style="margin-top: 20px;">
+                                                    <label>Filter by item name, category name and item code</label>
+                                                    <div class="filter">
+                                                        <select class="form-element">
+                                                            <option value="1">Include</option>
+                                                            <option value="2">Exclude</option>
+                                                        </select>
+                                                        <select class="form-element">
+                                                            <option value="1">Category</option>
+                                                            <option value="2">Product</option>
+                                                        </select>
+                                                        <input type="text" id="ms1" placeholder="Add a Filter" class="form-element" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="form-control w-100">
+                                            <label>Offer type</label>
+                                            <select class="form-element">
+                                                <option value="1">Discount %</option>
+                                                <option value="1">Discount Amount</option>
+                                                <option value="1">Free</option>
+                                                <option>Special Rate</option>
+                                                <option>Gift Voucher</option>
+                                                <option>Unit Discount</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="flex-item">
+                                        <div class="section__content">
+                                        </div>
+                                    </div>
+                                    <div class="flex-item flex2">
+                                        <div class="discountbox active" id="discountbox">
+                                            <div class="discount-inner">
+                                                <div class="label">Apply to</div>
+                                                <div class="discount-options">
+                                                    <div class="form-control">
+                                                        <label>&nbsp;</label>
+                                                        <div class="switch-field">
+                                                            <input type="radio" id="switch_free2" name="free2" value="free" checked="">
+                                                            <label for="switch_free2">Group</label>
+                                                            <input type="radio" id="switch_per2" name="free2" value="per">
+                                                            <label for="switch_per2">Item</label>
+                                                            <input type="radio" id="switch_rs2" name="free2" value="rs">
+                                                            <label for="switch_rs2">Category</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-control">
+                                                        <label>Value</label>
+                                                        <input type="text" id="d_value" placeholder="Enter value" class="form-element" value="">
+                                                    </div>
+                                                    <div class="form-control">
+                                                        <label>Applicable to</label>
+                                                        <div class="switch-field">
+                                                            <input type="radio" id="offer_all" name="offer_Products" value="yes" checked="">
+                                                            <label for="offer_all">All</label>
+                                                            <input type="radio" id="offer_specific" name="offer_Products" value="no">
+                                                            <label for="offer_specific">Specific</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specific_filter" id="offer_filter">
+                                                <hr>
+                                                <div class="form-control" style="margin-top: 20px;">
+                                                    <label>Filter by item name, category name and item code</label>
+                                                    <div class="filter">
+                                                        <select class="form-element">
+                                                            <option value="1">Include</option>
+                                                            <option value="2">Exclude</option>
+                                                        </select>
+                                                        <select class="form-element">
+                                                            <option value="1">Category</option>
+                                                            <option value="2">Product</option>
+                                                        </select>
+                                                        <div class="ms-ctn form-control " id="ms1">
+                                                            <span class="ms-helper " style="display: none;"></span>
+                                                            <div class="ms-sel-ctn">
+                                                                <input type="text" class="" placeholder="Add a Filter" style="width: 58px;">
+                                                                <div style="display: none;"></div>
+                                                            </div>
+                                                            <div class="ms-trigger">
+                                                                <div class="ms-trigger-ico"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!---- Schedule-->
+                        <div class="crete-promo-wrapper">
+                            <div class="promo__heading">Schedule time for Promotion</div>
+                            <div class="flex-row">
+                                <div class="flex-item">
+                                    <div class="section__content">
+                                        Set up the time of promotion on which time and date you would like to run.
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>Start Date</label>
+                                        <input type="text" placeholder="Enter Start Date" class="form-element" id='datetimepicker1' />
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>End Date</label>
+                                        <input type="text" placeholder="Enter End Date" class="form-element" id='datetimepicker2' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="flex-item">
+                                    <div class="section__content">
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>Start Time</label>
+                                        <input type="text" placeholder="Enter Start Time" class="form-element timepicker" />
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>End Time</label>
+                                        <input type="text" placeholder="Enter End Time" class="form-element timepicker" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="flex-item">
+                                    <div class="section__content">
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>Happy Days</label>
+                                        <select id="days" multiple="multiple">
+                                            <option value="1">Monday</option>
+                                            <option value="2">Tuesday</option>
+                                            <option value="3">Wednesday</option>
+                                            <option value="4">Thursday</option>
+                                            <option value="5">Friday</option>
+                                            <option value="6">Saturday</option>
+                                            <option value="7">Sunday</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control">
+                                        <label>First N Bills</label>
+                                        <input type="text" placeholder="First Number of Bills" class="form-element" id='datetimepicker2' />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crete-promo-wrapper">
+                            <div class="promo__heading">Target this Promotion</div>
+                            <div class="flex-row">
+                                <div class="flex-item">
+                                    <div class="section__content">
+                                        Allow all distributers to receive this promotion or target specific groups.
+                                    </div>
+                                </div>
+                                <div class="flex-item flex2">
+                                    <div class="data-panel active">
+                                        <div class="Promotion__type ">Available to Everyone</div>
+                                        <hr>
+                                        <div class="Promotion__details">All distributers can receive this promotion.</div>
+                                    </div>
+                                    <div class="data-panel">
+                                        <div class="Promotion__type">Exclusive to Some</div>
+                                        <hr>
+                                        <div class="Promotion__details">Only distributers within a specific distributer group can redeem this promotion.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+            <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+            <script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+            <script src="assets/js/magicsuggest.js"></script>
+            <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

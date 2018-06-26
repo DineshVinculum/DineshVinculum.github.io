@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vestige</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .form-control>label {
+            min-width: 100px;
+            max-width: 100px;
+            margin-right: 10px;
+            text-align: right;
+            margin-bottom: 0;
+            align-self: center;
+        }
+
+        .form-control {
+            flex-direction: row;
+        }
+
+        .section__title.accordian-heading {
+            display: flex;
+            justify-content: space-between;
+            background: #f8f8f8;
+            border-top: 1px solid #dedede;
+            padding-top: 10px;
+            cursor: pointer;
+            margin-bottom: 2px;
+        }
+
+        .accordian-panel {
+            padding-top: 10px;
+        }
+
+        .accordian-heading.open .fa:before {
+            content: "\f106";
+        }
+
+        .drop_target {
+            width: 100%;
+            height: 100px;
+        }
+
+        .tab-wrap {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+
+        div#example_filter {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--header start-->
+        <div class="header">
+            <div class="container">
+                <div class="flex-row">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" />
+                    </div>
+                    <div class="search">
+                        <form>
+                            <input type="text" placeholder="Search Here">
+                            <button type="submit" class="search-button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="header-right">
+                        <ul class="user-options">
+                            <li class="user-option-list language">
+                                <div class="current-location">
+                                    <i class="fa fa-globe" aria-hidden="true"></i>
+                                    <span class="location__name">Language</span>
+                                </div>
+                                <ul class="language-box">
+                                    <li class="language_name">
+                                        Hindi
+                                    </li>
+                                    <li class="language_name">
+                                        English
+                                    </li>
+                                    <li class="language_name">
+                                        Tamil
+                                    </li>
+                                    <li class="language_name">
+                                        Telugu
+                                    </li>
+                                    <li class="language_name">
+                                        Gujrati
+                                    </li>
+                                    <li class="language_name">
+                                        Oriya
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="user-option-list location">
+                                <div class="current-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span class="location__name">AALO MI</span>
+                                </div>
+                                <div class="location-box">
+                                    <div class="location-header">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>Choose your location</span>
+                                    </div>
+                                    <div class="location-content">
+                                        <!-- Cities-->
+                                        <div class="cities">
+                                            <ul class="cities-list">
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/delhi.png" alt="Delhi">
+                                                    </div>
+                                                    <span>Delhi</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/mumbai.png" alt="Mumbai">
+                                                    </div>
+                                                    <span>Mumbai</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/agra.png" alt="Agra">
+                                                    </div>
+                                                    <span>Agra</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/pune.png" alt="Pune">
+                                                    </div>
+                                                    <span>Pune</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/kolkata.png" alt="Kolkata">
+                                                    </div>
+                                                    <span>Kolkata</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/gurgaon.png" alt="gurgaon">
+                                                    </div>
+                                                    <span>Gurgaon</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/noida.png" alt="Noida">
+                                                    </div>
+                                                    <span>Noida</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Cities End-->
+                                        <div class="your-city">
+                                            <div class="your-city--inner">
+                                                <div class="city-box">
+                                                    <form class="">
+                                                        <input list="browsers" name="browser" class="selectbox" placeholder="Choose Your location" value="AALO MI">
+                                                        <datalist id="browsers">
+                                                            <option value="AALO MI"></option>
+                                                            <option value="AALO DE"></option>
+                                                            <option value="Aligarh"></option>
+                                                            <option value="Indore"></option>
+                                                            <option value="Mathura"></option>
+                                                        </datalist>
+                                                        <button type="submit" class="city__submit">
+                                                            <i class="fa fa-send-o"></i> Submit</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="user-option-list notification">
+                                <div class="notificationa-alert">
+                                    <span class="alert__count">5</span>
+                                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                </div>
+                                <!--notification box-->
+                                <div class="notification-listbox">
+                                    <div class="notification-header">
+                                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                        <span>Notifications</span>
+                                    </div>
+                                    <ul class="notification-list">
+                                        <li class="notification-list--item">
+                                            <div class="notification-image">
+                                                <img src="assets/images/avtar.jpg" alt="">
+                                            </div>
+                                            <div class="notification-details">
+                                                <div>
+                                                    <span class="notification__username">Rajiv Shukla</span>
+                                                    liked your post
+                                                </div>
+                                                <p class="notification-time">
+                                                    <small>5 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="notification-list--item">
+                                            <div class="notification-image">
+                                                <img src="assets/images/avtar.jpg" alt="">
+                                            </div>
+                                            <div class="notification-details">
+                                                <div>
+                                                    <span class="notification__username">Rajiv Shukla</span>
+                                                    liked your post
+                                                </div>
+                                                <p class="notification-time">
+                                                    <small>5 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="notification-list--item">
+                                            <div class="notification-image">
+                                                <img src="assets/images/avtar.jpg" alt="">
+                                            </div>
+                                            <div class="notification-details">
+                                                <div>
+                                                    <span class="notification__username">Rajiv Shukla</span>
+                                                    liked your post
+                                                </div>
+                                                <p class="notification-time">
+                                                    <small>5 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="notification-footer">
+                                        <a href="#">View All Notifications
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--notification box end-->
+                            </li>
+                            <li class="user-option-list profile">
+                                <div class="user-profile">
+                                    <img src="assets/images/avtar.jpg" />
+                                    <div class="user-detail">
+                                        <div class="user__name">User Name</div>
+                                        <div class="user__role">User Role</div>
+                                    </div>
+                                </div>
+                                <div class="user-profile-box">
+                                    <div class="user-box--item">
+                                        <a href="">
+                                            <i class="fa fa-cog"></i>
+                                            <span>Setting</span>
+                                        </a>
+                                    </div>
+                                    <div class="user-box--item">
+                                        <a href="">
+                                            <i class="fa fa-user"></i>
+                                            <span>My Profile</span>
+                                        </a>
+                                    </div>
+                                    <div role="separator" class="divider"></div>
+                                    <div class="user-box--item">
+                                        <a href="#">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                            <span>Logout</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header end-->
+        <div class="content-area">
+            <!-- sidenav start-->
+            <div class="sidenav">
+                <div class="sidenav-menu">
+                    <!-- Menu Start-->
+                    <ul class="menu-list">
+                        <li class="menu-list-item">
+                            <a class="menu-item__link" title="Menu">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                <span>Menu</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" title="Purchase Order" href="Purchase-Order-detail.html">
+                                <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                                <span>Purchase Order</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item" title="Item List">
+                            <a class="menu-item__link" href="item-table.html">
+                                <i class="fa fa-cube" aria-hidden="true"></i>
+                                <span>Item List</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item" title="Promotions">
+                            <a class="menu-item__link" href="index.html">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                                <span>Promotions</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item" title="Location">
+                            <a class="menu-item__link" href="hierarchy-table.html">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>Location</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item active">
+                            <a class="menu-list__link" href="distributer.html" title="Add Distributer">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                <span>Add Distributer</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" href="vendor_master.html" title="Vendor Master">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span>Vendor Master</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" href="STO.html" title="Stock Transfer">
+                                <i class="fa fa-truck" aria-hidden="true"></i>
+                                <span>Stock Transfer</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" href="Tax.html" title="Tax">
+                                <i class="fa fa-inr" aria-hidden="true"></i>
+                                <span>Tax</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--Menu End-->
+                </div>
+            </div>
+            <!-- sidenav end-->
+
+            <div class="page-content">
+                <!--Titlebar-->
+                <div class="titlebar">
+                    <div class="title_name">
+                        Add Distributor
+                    </div>
+                    <div class="page-actions">
+                        <ul class="action-list">
+                            <li class="action-item">
+                                <a href="#">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <span class="action__name">Search</span>
+                                </a>
+                            </li>
+                            <li class="action-item">
+                                <a href="#">
+                                    <i class="fa fa-list"></i>
+                                    <span class="action__name">View List</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Titlebar End-->
+                <div class="section__title tab-wrap">
+                    <span data="distributer-info" class="active">Distributer Information</span>
+                    <span data="documnet-list">Document List</span>
+                </div>
+                <div class="form--wrapper">
+                    <div class="tab-conetnt">
+                        <div id="distributer-info" class="location-form tab-data">
+                            <div class="flex-row">
+                                <div class="flex-item">
+                                    <div class="form-control mandatory">
+                                        <label>Distributor ID</label>
+                                        <input type="text" class="form-element">
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control mandatory">
+                                        <label>Upline ID</label>
+                                        <input type="text" class="form-element">
+                                    </div>
+                                </div>
+                                <div class="flex-item">
+                                    <div class="form-control ">
+                                        <label>Name</label>
+                                        <input type="text" class="form-element readonly">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordian-box">
+                                <div class="section__title accordian-heading open">Basic Information
+                                    <div class="expand-icon">
+                                        <i class="fa fa-angle-down rotate-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="accordian-panel">
+                                    <div class="flex-row">
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Name</label>
+                                                <div class="item-flex">
+                                                    <select class="form-element" style="width:100px;margin-right: 5px; padding-left: 5px">
+                                                        <option value="select">Select</option>
+                                                        <option value="1">Mr</option>
+                                                        <option value="1">Mrs</option>
+                                                        <option value="1">Miss</option>
+                                                        <option value="1">Ms</option>
+                                                        <option value="1">Dr</option>
+                                                        <option value="1">Sir</option>
+                                                    </select>
+                                                    <input type="text" class="form-element" Placeholder="First Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Last Name</label>
+                                                <input type="text" class="form-element" Placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Date of Birth</label>
+                                                <div class="item-flex">
+                                                    <input type="text" class="form-element" Placeholder="12-Jan-1900">
+                                                    <div class="item-picker" Title="Age of Distributor must be 18+">
+                                                        <i class="fa fa-info" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section__title">Contact Details</div>
+                                    <div class="flex-row">
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Phone</label>
+                                                <input type="text" class="form-element">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control mandatory">
+                                                <label>Mobile</label>
+                                                <input type="text" class="form-element">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Email</label>
+                                                <input type="text" class="form-element">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-row">
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Pin</label>
+                                                <input type="text" class="form-element">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control mandatory">
+                                                <label>Address</label>
+                                                <input type="text" class="form-element">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control mandatory">
+                                                <label>Country</label>
+                                                <input type="text" class="form-element">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-row">
+                                        <div class="flex-item">
+                                            <div class="form-control mandatory">
+                                                <label>State</label>
+                                                <input type="text" class="form-element">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control mandatory">
+                                                <label>City</label>
+                                                <input type="text" class="form-element">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control">
+                                                <label>Zone</label>
+                                                <input type="text" class="form-element">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordian-box">
+                                <div class="section__title accordian-heading">Additional Information
+                                    <div class="expand-icon">
+                                        <i class="fa fa-angle-down rotate-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="accordian-panel" style="display:none">
+                                    <div class="flex-row">
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Nominee Name</label>
+                                                <div class="item-flex">
+                                                    <select class="form-element" style="width:100px;margin-right: 5px; padding-left: 5px">
+                                                        <option value="select">Select</option>
+                                                        <option value="1">Mr</option>
+                                                        <option value="1">Mrs</option>
+                                                        <option value="1">Miss</option>
+                                                        <option value="1">Ms</option>
+                                                        <option value="1">Dr</option>
+                                                        <option value="1">Sir</option>
+                                                    </select>
+                                                    <input type="text" class="form-element" Placeholder="First Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Last Name</label>
+                                                <input type="text" class="form-element" Placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Date of Birth</label>
+                                                <div class="item-flex">
+                                                    <input type="text" class="form-element" Placeholder="12-Jan-1900">
+                                                    <div class="item-picker" Title="Age of Distributor must be 18+">
+                                                        <i class="fa fa-info" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section__title">KYC Details</div>
+                                    <div class="flex-row">
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Bank Name</label>
+                                                <select class="form-element">
+                                                    <option value="select">Select Bank</option>
+                                                    <option value="1">AXIS Bank</option>
+                                                    <option value="1">Bank Of Baroda</option>
+                                                    <option value="1">Bank Of India</option>
+                                                    <option value="1">Punjab National Bank</option>
+                                                    <option value="1">State Bank Of India</option>
+                                                    <option value="1">Union Bank Of India</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Account Name</label>
+                                                <input type="text" class="form-element" Placeholder="Account No.">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>IFSC Code</label>
+                                                <input type="text" class="form-element" placeholder="IFSC Code">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-row">
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>PAN Number</label>
+                                                <input type="text" class="form-element" placeholder=" Number">
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                        </div>
+                                        <div class="flex-item">
+                                        </div>
+                                    </div>
+                                    <div class="flex-row">
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Bank Documents</label>
+                                                <div class="settings_wrap">
+                                                    <label class="drop_target">
+                                                        <div class="image_preview"></div>
+                                                        <input id="inputFile" type="file" />
+                                                    </label>
+                                                    <div class="settings_actions vertical">
+                                                        <a class="disabled" data-action="remove_current_image">
+                                                            <i class="fa fa-ban"></i> Remove Current Image</a>
+                                                    </div>
+                                                    <div class="image_details">
+                                                        <label class="input_line image_title">
+                                                            <input type="text" placeholder="Title" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>PAN Card</label>
+                                                <div class="settings_wrap">
+                                                    <label class="drop_target">
+                                                        <div class="image_preview"></div>
+                                                        <input id="inputFile" type="file" />
+                                                    </label>
+                                                    <div class="settings_actions vertical">
+                                                        <a class="disabled" data-action="remove_current_image">
+                                                            <i class="fa fa-ban"></i> Remove Current Image</a>
+                                                    </div>
+                                                    <div class="image_details">
+                                                        <label class="input_line image_title">
+                                                            <input type="text" placeholder="Title" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-item">
+                                            <div class="form-control ">
+                                                <label>Address Proof</label>
+                                                <div class="settings_wrap">
+                                                    <label class="drop_target">
+                                                        <div class="image_preview"></div>
+                                                        <input id="inputFile" type="file" />
+                                                    </label>
+                                                    <div class="settings_actions vertical">
+                                                        <a class="disabled" data-action="remove_current_image">
+                                                            <i class="fa fa-ban"></i> Remove Current Image</a>
+                                                    </div>
+                                                    <div class="image_details">
+                                                        <label class="input_line image_title">
+                                                            <input type="text" placeholder="Title" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="action-buttons form-action-buttons scrolled">
+                                    <div class="add_promotion">Save</div>
+                                    <div class="add_promotion cancel">Cancel</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="documnet-list" class="location-form tab-data" style="display:none">
+                            <table id="example" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Document Name</th>
+                                        <th>Document Type</th>
+                                        <th>Upload Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="table-action">
+                                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                <div class="action-box">
+                                                    <div class="action-item">
+                                                        <i class="fa fa-edit"></i>Edit
+                                                    </div>
+                                                    <div class="action-item">
+                                                        <i class="fa fa-eye"></i>View
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Bank Details</td>
+                                        <td>Cancelled cheque</td>
+                                        <td>June--6-2018</td>
+                                        <td>Approved</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-action">
+                                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                <div class="action-box">
+                                                    <div class="action-item">
+                                                        <i class="fa fa-edit"></i>Edit
+                                                    </div>
+                                                    <div class="action-item">
+                                                        <i class="fa fa-eye"></i>View
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Bank Details</td>
+                                        <td>Cancelled cheque</td>
+                                        <td>June--6-2018</td>
+                                        <td>Approved</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-action">
+                                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                <div class="action-box">
+                                                    <div class="action-item">
+                                                        <i class="fa fa-edit"></i>Edit
+                                                    </div>
+                                                    <div class="action-item">
+                                                        <i class="fa fa-eye"></i>View
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Bank Details</td>
+                                        <td>Cancelled cheque</td>
+                                        <td>June--6-2018</td>
+                                        <td>Approved</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-action">
+                                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                <div class="action-box">
+                                                    <div class="action-item">
+                                                        <i class="fa fa-edit"></i>Edit
+                                                    </div>
+                                                    <div class="action-item">
+                                                        <i class="fa fa-eye"></i>View
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Bank Details</td>
+                                        <td>Cancelled cheque</td>
+                                        <td>June--6-2018</td>
+                                        <td>Approved</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-action">
+                                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                <div class="action-box">
+                                                    <div class="action-item">
+                                                        <i class="fa fa-edit"></i>Edit
+                                                    </div>
+                                                    <div class="action-item">
+                                                        <i class="fa fa-eye"></i>View
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Bank Details</td>
+                                        <td>Cancelled cheque</td>
+                                        <td>June--6-2018</td>
+                                        <td>Approved</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="footer-actionbuttons">
+                        <div class="round-button">
+                            <i class="button__icon fa fa-print"></i>
+                            <span class="button__name">Print</span>
+                        </div>  
+                        <div class="round-button">
+                            <i class="button__icon fa fa-clone"></i>
+                            <span class="button__name">Clone</span>
+                        </div>
+                    </div>
+                <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                <script src="assets/js/upload.js"></script>
+                <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        var table = $('#example').DataTable({
+                            paging: false,
+                            columnDefs: [
+                                { targets: [0, 1, 2, 4], orderable: false }
+                            ],
+                        });
+                    });
+                </script>
+                <script>
+                    jQuery(document).ready(function () {
+                        jQuery(".section__title span").on("click", function (e) {
+                            var data = jQuery(this).attr('data');
+                            jQuery(this).siblings().removeClass('active');
+                            jQuery(this).addClass('active');
+                            jQuery("#" + data).siblings('.tab-data').hide();
+                            jQuery("#" + data).show();
+                        });
+                        jQuery('.accordian-heading').click(function () {
+                            jQuery(this).toggleClass('open');
+                            //jQuery(this).parent('.accordian-box').children('.accordian-panel').hide();
+                            jQuery(this).siblings().slideToggle();
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

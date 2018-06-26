@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vestige</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="jqwidgets/styles/jqx.base.css" type="text/css" />
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--header start-->
+        <div class="header">
+            <div class="container">
+                <div class="flex-row">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" />
+                    </div>
+                    <div class="search">
+                        <form>
+                            <input type="text" placehOlder="Search Here">
+                            <button type="submit" class="search-button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="header-right">
+                        <ul class="user-options">
+                            <li class="user-option-list language">
+                                <div class="current-location">
+                                    <i class="fa fa-globe" aria-hidden="true"></i>
+                                    <span class="location__name">Language</span>
+                                </div>
+                                <ul class="language-box">
+                                    <li class="language_name">
+                                        Hindi
+                                    </li>
+                                    <li class="language_name">
+                                        English
+                                    </li>
+                                    <li class="language_name">
+                                        Tamil
+                                    </li>
+                                    <li class="language_name">
+                                        Telugu
+                                    </li>
+                                    <li class="language_name">
+                                        Gujrati
+                                    </li>
+                                    <li class="language_name">
+                                        Oriya
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="user-option-list location">
+                                <div class="current-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span class="location__name">AALO MI</span>
+                                </div>
+                                <div class="location-box">
+                                    <div class="location-header">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>Choose your location</span>
+                                    </div>
+                                    <div class="location-content">
+                                        <!-- Cities-->
+                                        <div class="cities">
+                                            <ul class="cities-list">
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/Delhi.png" alt="Delhi">
+                                                    </div>
+                                                    <span>Delhi</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/mumbai.png" alt="Mumbai">
+                                                    </div>
+                                                    <span>Mumbai</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/agra.png" alt="Agra">
+                                                    </div>
+                                                    <span>Agra</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/pune.png" alt="Pune">
+                                                    </div>
+                                                    <span>Pune</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/kolkata.png" alt="Kolkata">
+                                                    </div>
+                                                    <span>Kolkata</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/gurgaon.png" alt="gurgaon">
+                                                    </div>
+                                                    <span>Gurgaon</span>
+                                                </li>
+                                                <li class="city-name">
+                                                    <div class="city-image">
+                                                        <img src="assets/images/Noida.png" alt="Noida">
+                                                    </div>
+                                                    <span>Noida</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Cities End-->
+                                        <div class="your-city">
+                                            <div class="your-city--inner">
+                                                <div class="city-box">
+                                                    <form class="">
+                                                        <input list="browsers" name="browser" class="selectbox" placehOlder="Choose Your location" value="AALO MI">
+                                                        <datalist id="browsers">
+                                                            <option value="AALO MI"></option>
+                                                            <option value="AALO DE"></option>
+                                                            <option value="Aligarh"></option>
+                                                            <option value="Indore"></option>
+                                                            <option value="Mathura"></option>
+                                                        </datalist>
+                                                        <button type="submit" class="city__submit">
+                                                            <i class="fa fa-send-o"></i> Submit</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="user-option-list notification">
+                                <div class="notificationa-alert">
+                                    <span class="alert__count">5</span>
+                                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                </div>
+                                <!--notification box-->
+                                <div class="notification-listbox">
+                                    <div class="notification-header">
+                                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                        <span>Notifications</span>
+                                    </div>
+                                    <ul class="notification-list">
+                                        <li class="notification-list--item">
+                                            <div class="notification-image">
+                                                <img src="assets/images/avtar.jpg" alt="">
+                                            </div>
+                                            <div class="notification-details">
+                                                <div>
+                                                    <span class="notification__username">Rajiv Shukla</span>
+                                                    liked your post
+                                                </div>
+                                                <p class="notification-time">
+                                                    <small>5 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="notification-list--item">
+                                            <div class="notification-image">
+                                                <img src="assets/images/avtar.jpg" alt="">
+                                            </div>
+                                            <div class="notification-details">
+                                                <div>
+                                                    <span class="notification__username">Rajiv Shukla</span>
+                                                    liked your post
+                                                </div>
+                                                <p class="notification-time">
+                                                    <small>5 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="notification-list--item">
+                                            <div class="notification-image">
+                                                <img src="assets/images/avtar.jpg" alt="">
+                                            </div>
+                                            <div class="notification-details">
+                                                <div>
+                                                    <span class="notification__username">Rajiv Shukla</span>
+                                                    liked your post
+                                                </div>
+                                                <p class="notification-time">
+                                                    <small>5 mins ago</small>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="notification-footer">
+                                        <a href="#">View All Notifications
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--notification box end-->
+                            </li>
+                            <li class="user-option-list profile">
+                                <div class="user-profile">
+                                    <img src="assets/images/avtar.jpg" />
+                                    <div class="user-detail">
+                                        <div class="user__name">User Name</div>
+                                        <div class="user__role">User Role</div>
+                                    </div>
+                                </div>
+                                <div class="user-profile-box">
+                                    <div class="user-box--item">
+                                        <a href="">
+                                            <i class="fa fa-cog"></i>
+                                            <span>Setting</span>
+                                        </a>
+                                    </div>
+                                    <div class="user-box--item">
+                                        <a href="">
+                                            <i class="fa fa-user"></i>
+                                            <span>My Profile</span>
+                                        </a>
+                                    </div>
+                                    <div role="separator" class="divider"></div>
+                                    <div class="user-box--item">
+                                        <a href="#">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                            <span>Logout</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header end-->
+        <div class="content-area">
+            <!-- sidenav start-->
+            <div class="sidenav">
+                <div class="sidenav-menu">
+                    <!-- Menu Start-->
+                    <ul class="menu-list">
+                        <li class="menu-list-item">
+                            <a class="menu-item__link" title="Menu">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                <span>Menu</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item ">
+                            <a class="menu-item__link" title="Purchase Order" href="Purchase-Order-detail.html">
+                                <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                                <span>Purchase Order</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item" title="Item List">
+                            <a class="menu-item__link" href="item-table.html">
+                                <i class="fa fa-cube" aria-hidden="true"></i>
+                                <span>Item List</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item" title="Promotions">
+                            <a class="menu-item__link" href="index.html">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                                <span>Promotions</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item active" title="Location">
+                            <a class="menu-item__link" href="hierarchy-table.html">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>Location</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item ">
+                            <a class="menu-list__link" href="distributer.html" title="Add Distributer">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                <span>Add Distributer</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" href="vendor_master.html" title="Vendor Master">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span>Vendor Master</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" href="STO.html" title="Stock Transfer">
+                                <i class="fa fa-truck" aria-hidden="true"></i>
+                                <span>Stock Transfer</span>
+                            </a>
+                        </li>
+						<li class="menu-list-item">
+                            <a class="menu-item__link" href="Tax.html" title="Tax">
+                                <i class="fa fa-inr" aria-hidden="true"></i>
+                                <span>Tax</span>
+                            </a>
+                        </li>
+                    </ul>>
+                    <!--Menu End-->
+                </div>
+            </div>
+            <!-- sidenav end-->
+
+            <div class="page-content">
+                <!--Titlebar-->
+                <div class="titlebar">
+                    <div class="title_name">
+                        Location Hierarchy List
+                    </div>
+                    <div class="page-actions">
+                        <ul class="action-list">
+                            <li class="action-item" onclick="treeview()">
+                                <a href="#">
+                                    <img src="assets/images/tree.png" style=" height: 18px; margin: 0 auto;">
+                                    <span class="action__name">Tree View</span>
+                                </a>
+                            </li>
+                            <li class="action-item" onclick="Listview()">
+                                <a href="#">
+                                    <i class="fa fa-list" aria-hidden="true"></i>
+                                    <span class="action__name">List View</span>
+                                </a>
+                            </li>
+                            <li class="action-item">
+                                <a href="hierarchy.html">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    <span class="action__name">Add New</span>
+                                </a>
+                            </li>
+                            <li class="action-item">
+                                <a href="#">
+                                    <i class="fa fa-print"></i>
+                                    <span class="action__name">Print List</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Titlebar End-->
+                <div class="data-list" id="list-view">
+                    <div class="list--header">
+                        <span class="location__heading">
+                            <i class="fa fa-map-marker"></i> Locations</span>
+                        <div class="searchby">
+                            <select>
+                                <option>Select Zone</option>
+                                <option>North Zone</option>
+                                <option>South Zone</option>
+                                <option>East Zone</option>
+                                <option>West Zone</option>
+                            </Select>
+                            <select>
+                                <option>Select State</option>
+                                <option>Delhi</option>
+                                <option>Haryana</option>
+                                <option>Punjab</option>
+                            </Select>
+                        </div>
+                    </div>
+                    <table id="example" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Country</th>
+                                <th>State</th>
+                                <th>City</th>
+                                <th>Location Type</th>
+                                <th>Location Code</th>
+                                <th>Parent Warehouse</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="table-action">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <div class="action-box">
+                                            <div class="action-item">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </div>
+                                            <div class="action-item">
+                                                <i class="fa fa-eye"></i>View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>B0011</td>
+                                <td>Delhi</td>
+                                <td>A 89 , OKHLA INDUSTRIAL AREA PHASE 2</td>
+                                <td>India</td>
+                                <td>Delhi</td>
+                                <td>New Delhi</td>
+                                <td>Branch Office</td>
+                                <td>11021</td>
+                                <td>Mother Warehouse</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-action">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <div class="action-box">
+                                            <div class="action-item">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </div>
+                                            <div class="action-item">
+                                                <i class="fa fa-eye"></i>View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>B0012</td>
+                                <td>Bengalure</td>
+                                <td>ATRIUM PRESTIGE TOWER , 503 , 4td FLOOR</td>
+                                <td>India</td>
+                                <td>Karnataka</td>
+                                <td>Bengalure</td>
+                                <td><span class="all">All </span>Head Office</td>
+                                <td>11024</td>
+                                <td>Mother Warehouse</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-action">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <div class="action-box">
+                                            <div class="action-item">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </div>
+                                            <div class="action-item">
+                                                <i class="fa fa-eye"></i>View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>B0013</td>
+                                <td>Noida Branch</td>
+                                <td>12, STREET 2</td>
+                                <td>India</td>
+                                <td>Uttar Pradesh</td>
+                                <td>Noida</td>
+                                <td>Branch Office</td>
+                                <td>11024</td>
+                                <td>Warehouse2</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-action">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <div class="action-box">
+                                            <div class="action-item">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </div>
+                                            <div class="action-item">
+                                                <i class="fa fa-eye"></i>View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>B0014</td>
+                                <td>Agartala</td>
+                                <td>HOUSE NO. 7, HOldING NO.825/R 2ND FLOOR</td>
+                                <td>India</td>
+                                <td>Tripur</td>
+                                <td>Agartala</td>
+                                <td>DLCP</td>
+                                <td>11021</td>
+                                <td>Mother Warehouse</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-action">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <div class="action-box">
+                                            <div class="action-item">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </div>
+                                            <div class="action-item">
+                                                <i class="fa fa-eye"></i>View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>B0015</td>
+                                <td>Trichy</td>
+                                <td>VIJAY TOWERS</td>
+                                <td>India</td>
+                                <td>Tamil Nadu</td>
+                                <td>Trichy</td>
+                                <td>Mini DLCP</td>
+                                <td>11024</td>
+                                <td>Chennai Warehouse</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-action">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <div class="action-box">
+                                            <div class="action-item">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </div>
+                                            <div class="action-item">
+                                                <i class="fa fa-eye"></i>View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>B0016</td>
+                                <td>Hydetabad Old</td>
+                                <td>1-7-228 , CELLAR</td>
+                                <td>India</td>
+                                <td>Andhra Pradesh</td>
+                                <td>Hydetabad</td>
+                                <td>Warehouse</td>
+                                <td>11021</td>
+                                <td>Mother Warehouse</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-action">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <div class="action-box">
+                                            <div class="action-item">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </div>
+                                            <div class="action-item">
+                                                <i class="fa fa-eye"></i>View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>B0017</td>
+                                <td>Ahmedabad</td>
+                                <td>101 , HRISHIKES 2 , FIRST FLOOR</td>
+                                <td>India</td>
+                                <td>Gujrat</td>
+                                <td>Ahmedabad</td>
+                                <td>DCC</td>
+                                <td>11024</td>
+                                <td>Ahmedabad</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-action">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <div class="action-box">
+                                            <div class="action-item">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </div>
+                                            <div class="action-item">
+                                                <i class="fa fa-eye"></i>View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>B0018</td>
+                                <td>Kanpur</td>
+                                <td>G.F-2, RATAN ESQUIRE, 14/144</td>
+                                <td>India</td>
+                                <td>Uttar Pradesh</td>
+                                <td>Kanpur</td>
+                                <td>Warehouse</td>
+                                <td>11024</td>
+                                <td>Mother Warehouse</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-action">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        <div class="action-box">
+                                            <div class="action-item">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </div>
+                                            <div class="action-item">
+                                                <i class="fa fa-eye"></i>View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>B0019</td>
+                                <td>GHAZIA Old</td>
+                                <td>12/504 , 2ND FLOOR</td>
+                                <td>India</td>
+                                <td>Uttar Pradesh</td>
+                                <td>GHAZIABAD</td>
+                                <td>Warehouse</td>
+                                <td>11021</td>
+                                <td>Mother Warehouse</td>
+                                <td>Active</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Tree View-->
+                <div id="tree-view" style="display: none">
+                    <div class="list--header">
+                        <span class="location__heading">
+                            <i class="fa fa-map-marker"></i> Locations</span>
+                    </div>
+                    <div id='jqxWidget'>
+                        <div style='float: left;'>
+                            <div id='jqxTree' style='visibility: hidden;'>
+                                <ul>
+                                    <li id='home' item-expanded='true'>North Zone
+                                        <ul>
+                                            <li item-expanded='true'>Delhi
+                                                <ul>
+                                                    <li>Head office (HO)</li>
+                                                    <li>Warehouse1 (WHO1)</li>
+                                                    <li>Warehouse2 (WHO2)</li>
+                                                    <li>Warehouse3 (WHO3)</li>
+                                                    <li>Branch offices
+                                                        <ul>
+                                                            <li>Janakpuri (DLCP)</li>
+                                                            <li>Punjabi Bhag (Mini DLCP)</li>
+                                                            <li>Shahdara (DCC)</li>
+                                                            <li>Janakpuri (DLCP)</li>
+                                                            <li>Punjabi Bhag (Mini DLCP)</li>
+                                                            <li>Shahdara (DCC)</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>Haryana</li>
+                                            <li>Himachal Pradesh</li>
+                                            <li>Punjab</li>
+                                            <li>Rajasthan</li>
+                                            <li>Uttarakhand</li>
+                                            <li>Uttar Pradesh</li>
+                                        </ul>
+                                    </li>
+                                    <li>East Zone
+                                        <ul>
+                                            <li id='home'>Head office (HO)</li>
+                                            <li>Agra Warehouse (WHAL-1)
+                                                <ul>
+                                                    <li></li>
+                                                    <li>Mobile products</li>
+                                                    <li>All products</li>
+                                                </ul>
+                                            </li>
+                                            <li>Kanpur Warehouse (WHKP-1)
+                                                <ul>
+                                                    <li>Education</li>
+                                                    <li>Financial services</li>
+                                                    <li>Government</li>
+                                                    <li item-checked='false'>Manufacturing</li>
+                                                    <li>Solutions
+                                                        <ul>
+                                                            <li>Consumer photo and video</li>
+                                                            <li>Mobile</li>
+                                                            <li>Rich Internet applications</li>
+                                                            <li>Technical communication</li>
+                                                            <li>Training and eLearning</li>
+                                                            <li>Web conferencing</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>All industries and solutions</li>
+                                                </ul>
+                                            </li>
+                                            <li>Moher Warehouse (WHKN-1)
+                                                <ul>
+                                                    <li>PC products</li>
+                                                    <li>Mobile products</li>
+                                                    <li>All products</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>South Zone
+                                        <ul>
+                                            <li id='home'>Head office (HO)</li>
+                                            <li>Agra Warehouse (WHAL-1)
+                                                <ul>
+                                                    <li></li>
+                                                    <li>Mobile products</li>
+                                                    <li>All products</li>
+                                                </ul>
+                                            </li>
+                                            <li>Kanpur Warehouse (WHKP-1)
+                                                <ul>
+                                                    <li>Education</li>
+                                                    <li>Financial services</li>
+                                                    <li>Government</li>
+                                                    <li item-checked='false'>Manufacturing</li>
+                                                    <li>Solutions
+                                                        <ul>
+                                                            <li>Consumer photo and video</li>
+                                                            <li>Mobile</li>
+                                                            <li>Rich Internet applications</li>
+                                                            <li>Technical communication</li>
+                                                            <li>Training and eLearning</li>
+                                                            <li>Web conferencing</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>All industries and solutions</li>
+                                                </ul>
+                                            </li>
+                                            <li>Moher Warehouse (WHKN-1)
+                                                <ul>
+                                                    <li>PC products</li>
+                                                    <li>Mobile products</li>
+                                                    <li>All products</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>West Zone
+                                        <ul>
+                                            <li id='home'>Head office (HO)</li>
+                                            <li>Agra Warehouse (WHAL-1)
+                                                <ul>
+                                                    <li></li>
+                                                    <li>Mobile products</li>
+                                                    <li>All products</li>
+                                                </ul>
+                                            </li>
+                                            <li>Kanpur Warehouse (WHKP-1)
+                                                <ul>
+                                                    <li>Education</li>
+                                                    <li>Financial services</li>
+                                                    <li>Government</li>
+                                                    <li item-checked='false'>Manufacturing</li>
+                                                    <li>Solutions
+                                                        <ul>
+                                                            <li>Consumer photo and video</li>
+                                                            <li>Mobile</li>
+                                                            <li>Rich Internet applications</li>
+                                                            <li>Technical communication</li>
+                                                            <li>Training and eLearning</li>
+                                                            <li>Web conferencing</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>All industries and solutions</li>
+                                                </ul>
+                                            </li>
+                                            <li>Moher Warehouse (WHKN-1)
+                                                <ul>
+                                                    <li>PC products</li>
+                                                    <li>Mobile products</li>
+                                                    <li>All products</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tree View End-->
+            </div>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+            <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    var groupColumn = 7;
+                    var table = $('#example').DataTable({
+                        "columnDefs": [
+                            { "visible": true, "targets": [0, 3, 5, 9, 10],orderable: false  }
+                        ],
+                        "columnDefs": [
+                            { "visible": false, "targets":[7]  }
+                        ],
+                       
+                        "order": [[groupColumn, 'asc']],
+                        "displayLength": 10,
+                        "drawCallback": function (settings) {
+                            var api = this.api();
+                            var rows = api.rows({ page: 'current' }).nodes();
+                            var last = null;
+
+                            api.column(groupColumn, { page: 'current' }).data().each(function (group, i) {
+                                if (last !== group) {
+                                    $(rows).eq(i).before(
+                                        '<tr class="group"><td colspan="10">' + group + '</td></tr>'
+                                    );
+
+                                    last = group;
+                                }
+                            });
+                        }
+                    });
+
+                    // Order by the grouping
+                    $('#example tbody').on('click', 'tr.group', function () {
+                        var currentOrder = table.order()[0];
+                        if (currentOrder[0] === groupColumn && currentOrder[1] === 'asc') {
+                            table.order([groupColumn, 'desc']).draw();
+                        }
+                        else {
+                            table.order([groupColumn, 'asc']).draw();
+                        }
+                    });
+                });
+            </script>
+            <script type="text/javascript" src="jqwidgets/jqxcore.js"></script>
+            <script type="text/javascript" src="jqwidgets/jqxbuttons.js"></script>
+            <script type="text/javascript" src="jqwidgets/jqxscrollbar.js"></script>
+            <script type="text/javascript" src="jqwidgets/jqxpanel.js"></script>
+            <script type="text/javascript" src="jqwidgets/jqxtree.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#jqxTree').jqxTree(
+                        {
+                            height: '500px',
+                            width: '600px',
+                        });
+                    $('#jqxTree').css('visibility', 'visible');
+                });
+                function Listview() {
+                    $('#tree-view').css('display', 'none');
+                    $('#list-view').css('display', 'block');
+                }
+                function treeview() {
+                    $('#tree-view').css('display', 'block');
+                    $('#list-view').css('display', 'none');
+                }
+            </script>
+            <script src="assets/js/custom1.js"></script>
+</body>
+
+</html>
